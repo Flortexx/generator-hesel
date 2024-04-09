@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Password Manager</h1>
+
+    <!-- Formulář pro generování hesel -->
+    <div class="generate">
+        <h2>Generate Password</h2>
+        <label for="passwordLength">Password Length:</label>
+        <input type="number" id="passwordLength" min="4" max="20" value="8">
+        <br>
+        <input type="checkbox" id="includeNumbers" checked>
+        <label for="includeNumbers">Čísla</label>
+        <br>
+        <input type="checkbox" id="includeSpecialChars" checked>
+        <label for="includeSpecialChars">Speciální znaky</label>
+        <br>
+        <input type="checkbox" id="uppercase" checked>
+        <label for="uppercase">Velká písmena</label>
+        <br>
+        <button id="generatePassword">generovat heslo</button>
+        <p id="generatedPassword"></p>
+    </div>
+
+    <!-- Formulář pro přidání hesla -->
+    <div class="Add">
+        <h2>Add Password</h2>
+        <label for="accountName">Account Name:</label>
+        <input type="text" id="accountName">
+        <br>
+        <label for="accountPassword">Password:</label>
+        <input type="text" id="accountPassword">
+        <br>
+        <button id="addPassword">Add Password</button>
+    </div>
+
+    <!-- Seznam uložených hesel -->
+    <div class="Saved">
+        <h2>Saved Passwords</h2>
+        <div id="passwordList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
